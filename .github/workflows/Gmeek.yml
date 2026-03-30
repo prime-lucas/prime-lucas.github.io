@@ -12,22 +12,17 @@ jobs:
     name: Generate blog
     runs-on: ubuntu-24.04
     if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event.repository.owner.id == github.event.sender.id }}
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
+    permissions: write-all
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Check config.json
+      - name: Get config.json
         run: |
           echo "====== check config.json file ======"
           cat config.json
@@ -40,7 +35,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Clone Gmeek source code
+      - name: Clone source code
         run: |
           GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
           git clone https://github.com/Meekdai/Gmeek.git /opt/Gmeek
@@ -63,19 +58,12 @@ jobs:
 
       - name: Copy repository files to Gmeek workspace
         run: |
-          rsync -av --delete \
-            --exclude='.git' \
-            --exclude='.github' \
-            "${{ github.workspace }}/" /opt/Gmeek/
+          cp -a "${{ github.workspace }}/." /opt/Gmeek/
 
       - name: Generate blog
         run: |
           cd /opt/Gmeek
-          if [ "${{ github.event_name }}" = "issues" ] && [ "${{ github.event.action }}" != "closed" ]; then
-            python Gmeek.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }} --issue_number "${{ github.event.issue.number }}"
-          else
-            python Gmeek.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
-          fi
+          python Gmeek.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
 
       - name: Copy generated files back
         run: |
@@ -84,18 +72,19 @@ jobs:
           cp -a /opt/Gmeek/backup "${{ github.workspace }}/"
           cp /opt/Gmeek/blogBase.json "${{ github.workspace }}/"
 
-      - name: Commit and push updates
+      - name: update html
         run: |
-          git config --local user.email "$(jq -r '.email' config.json)"
+          git config --local user.email "$(jq -r ".email" config.json)"
           git config --local user.name "${{ github.repository_owner }}"
-          git add -A
-          git commit -m "🎉 auto update by Gmeek action" || echo "nothing to commit"
+          git add .
+          git commit -a -m '🎉auto update by Gmeek action' || echo "nothing to commit"
           git push || echo "nothing to push"
+          sleep 3
 
-      - name: Upload Pages artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.
+          path: 'docs/.'
 
   deploy:
     name: Deploy blog
@@ -106,12 +95,11 @@ jobs:
       pages: write
       id-token: write
     concurrency:
-      group: pages
+      group: "pages"
       cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
