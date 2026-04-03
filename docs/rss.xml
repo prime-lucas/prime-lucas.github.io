@@ -1,5 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>《撷芳录》</title><link>https://prime-lucas.github.io</link><description>纸短情长，墨浅意深。</description><copyright>《撷芳录》</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/255291446?u=495a37a7e5d312579bc649b9a6dc7d358aa42542&amp;v=4</url><title>avatar</title><link>https://prime-lucas.github.io</link></image><lastBuildDate>Fri, 03 Apr 2026 07:50:21 +0000</lastBuildDate><managingEditor>《撷芳录》</managingEditor><ttl>60</ttl><webMaster>《撷芳录》</webMaster><item><title>五行的来源与发展&amp;五行之间的生克关系</title><link>https://prime-lucas.github.io/post/wu-xing-de-lai-yuan-yu-fa-zhan-%26-wu-xing-zhi-jian-de-sheng-ke-guan-xi.html</link><description>&lt;html&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>《撷芳录》</title><link>https://prime-lucas.github.io</link><description>纸短情长，墨浅意深。</description><copyright>《撷芳录》</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/255291446?u=495a37a7e5d312579bc649b9a6dc7d358aa42542&amp;v=4</url><title>avatar</title><link>https://prime-lucas.github.io</link></image><lastBuildDate>Fri, 03 Apr 2026 07:52:55 +0000</lastBuildDate><managingEditor>《撷芳录》</managingEditor><ttl>60</ttl><webMaster>《撷芳录》</webMaster><item><title>五行跟中医五脏、情绪、五官、五味、颜色、季节等对应体系</title><link>https://prime-lucas.github.io/post/wu-xing-gen-zhong-yi-wu-zang-%E3%80%81-qing-xu-%E3%80%81-wu-guan-%E3%80%81-wu-wei-%E3%80%81-yan-se-%E3%80%81-ji-jie-deng-dui-ying-ti-xi.html</link><description>&lt;html&gt;
+&lt;body&gt;
+&lt;!--StartFragment--&gt;&lt;h1&gt;一、五行在中医里的核心落点：对应“五脏”&lt;/h1&gt;
+&lt;p&gt;五行在中医中最重要的应用，就是用来解释&lt;strong&gt;五脏系统之间的功能关系&lt;/strong&gt;：&lt;/p&gt;
+
+五行 | 五脏 | 主要功能关键词
+-- | -- | --
+木 | 肝 | 疏泄、调畅气机、藏血
+火 | 心 | 主血脉、主神明
+土 | 脾 | 运化水谷、升清、统血
+金 | 肺 | 主气、司呼吸、宣发肃降
+水 | 肾 | 藏精、主水、主骨、生髓
+
+
+&lt;p&gt;所以中医里常说：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;面色发黄 → 脾虚湿困&lt;/li&gt;
+&lt;li&gt;面色苍白 → 肺气不足或血虚&lt;/li&gt;
+&lt;li&gt;面色发黑暗沉 → 肾虚或寒湿&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1&gt;九、五行在调理中怎么用？（核心方法）&lt;/h1&gt;
+&lt;p&gt;五行在实际应用中，最常用的是三种思路：&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;1）补母泻子（用于虚证）&lt;/h2&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;肺虚（金虚） → 可以补脾（土生金）
+因为土生金，补脾能生肺。</description><guid isPermaLink="true">https://prime-lucas.github.io/post/wu-xing-gen-zhong-yi-wu-zang-%E3%80%81-qing-xu-%E3%80%81-wu-guan-%E3%80%81-wu-wei-%E3%80%81-yan-se-%E3%80%81-ji-jie-deng-dui-ying-ti-xi.html</guid><pubDate>Fri, 03 Apr 2026 07:52:20 +0000</pubDate></item><item><title>五行的来源与发展&amp;五行之间的生克关系</title><link>https://prime-lucas.github.io/post/wu-xing-de-lai-yuan-yu-fa-zhan-%26-wu-xing-zhi-jian-de-sheng-ke-guan-xi.html</link><description>&lt;html&gt;
 &lt;body&gt;
 &lt;!--StartFragment--&gt;&lt;p&gt;一、五行的来源与发展&lt;/p&gt;
 &lt;h3&gt;1. 五行最初不是“金木水火土”这么简单&lt;/h3&gt;
